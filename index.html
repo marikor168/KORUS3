@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>KORUS 3</title>
+</head>
+<body>
+  
+  <p>Отфильтровать
+    <select id="statusfilter">
+      <option value=""></option>
+      <option value="opened">Открыта</option>
+      <option value="process">В работе</option>
+      <option value="solved">Решена</option>
+    </select>
+  </p>
+
+  <button class="addTaskButton">Добавить задачу</button>
+  <table border="1">
+    <caption>Список задач</caption>
+    <thead>
+      <tr>
+        <th>Название задачи</th>
+        <th>Описание задачи</th>
+        <th>Статус задачи</th>
+        <th>Удалить задачу</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+    
+  </table>
+
+  <div class="modalWrapper hide">
+    <form class="modal">
+      <fieldset>
+        <legend>Добавление задачи</legend>
+        <input type="text" name="taskName" placeholder="Название задачи" required>
+        <div>
+          <textarea rows="5" cols="15" name="taskDescription">
+          </textarea>
+        </div>
+        <p>Статус задачи 
+          <select name="status">
+            <option value="opened" selected>Открыта</option>
+            <option value="process">В работе</option>
+            <option value="solved">Решена</option>
+          </select>
+        </p>
+  
+        <button type="submit" class="modalButton">Добавить задачу</button>
+      </fieldset>
+    </form>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
